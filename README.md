@@ -76,7 +76,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker ps](https://drive.google.com/file/d/1oGuGaOuXX8TlM4hQNdQl-tpJ2Y2d9x-X/view?usp=sharing "sudo dicker ps")
+![docker ps](https://github.com/eddie12frank/Frank/blob/main/Images/Docker%20PS.png "sudo dicker ps")
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
