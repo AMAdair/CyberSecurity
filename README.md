@@ -33,7 +33,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - "Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash"
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | **Name**   | **Function** | **IP**   | **OS** |
 |------------|--------------|----------|--------|
@@ -76,29 +75,37 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker ps](https://github.com/eddie12frank/Frank/blob/main/Images/Docker%20PS.png "sudo dicker ps")
+![docker ps](https://github.com/eddie12frank/Frank/blob/main/Images/Docker%20PS.png "sudo docker ps")
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web-1,2, and 3
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat consists of two main components: inputs and harvesters. These components work together to tail files and send event data to the output that you specify.
+- Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server, such as Apache and MySQL
+
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+-mkdir files within /etc/ansible
+-git clone https://github.com/AMAdair/CyberSecurity.git
+-cp filebeat-playbook.yml.txt /etc/ansible/files
+-cp metricbeat-playbook.yml.txt /etc/ansible/files
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Run the playbook, and navigate to Kibana to check that the installation worked as expected.
+Run the playbook, and navigate to kibana to check that the installation worked as expected.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+cd /etc/ansible
+ansible-playbook install_elk.yml
+ansible-playbook install_filebeat.yml
+ansible-playbook install_metricbeat.yml
+Check Kibana to verify installation succeeded
+
+website: http://http://20.211.2.85:5601//app/kibana
