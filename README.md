@@ -12,7 +12,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - [Metricbeat Playbook YAML](https://github.com/AMAdair/CyberSecurity/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topolog7
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -55,7 +55,7 @@ Machines within the network can only be accessed via the container within the Ju
 
 A summary of the access policies in place can be found in the table below.
 
-| **Name**   | **Publicly Accessable ** | **Allowed IPs** |
+| **Name**   | **Publicly Accessable** | **Allowed IPs** |
 |------------|--------------------------|-----------------|
 | Jump-Box   | Yes                      | 69.249.145.252  |
 | Web-1      | no                       | 10.0.0.4        |
