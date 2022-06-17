@@ -94,10 +94,10 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
--mkdir files within /etc/ansible
--git clone https://github.com/AMAdair/CyberSecurity.git
--cp filebeat-playbook.yml.txt /etc/ansible/files
--cp metricbeat-playbook.yml.txt /etc/ansible/files
+- mkdir files within /etc/ansible
+- git clone https://github.com/AMAdair/CyberSecurity.git
+- cp filebeat-playbook.yml.txt /etc/ansible/files
+- cp metricbeat-playbook.yml.txt /etc/ansible/files
 
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 Run the playbook, and navigate to kibana to check that the installation worked as expected.
